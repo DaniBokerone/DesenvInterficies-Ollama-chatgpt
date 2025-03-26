@@ -27,7 +27,7 @@ public class OllamaApi {
                             JSONObject jsonResponse = new JSONObject(line);
                             if (jsonResponse.has("response")) {
                                 String responseText = jsonResponse.getString("response");
-                                onResponse.accept(responseText
+                                onResponse.accept(responseText);
                             }
                         } catch (Exception e) {
                             System.err.println("Error parsing line: " + line);
